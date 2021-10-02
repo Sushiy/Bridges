@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2396387565111357148}
   - component: {fileID: 7927849998324993298}
   - component: {fileID: 5385685012350814910}
+  - component: {fileID: 152513906710898267}
   m_Layer: 0
   m_Name: SafeCube
   m_TagString: Untagged
@@ -99,6 +100,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &152513906710898267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627091366946565442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21472c3a40de0544ea8dee16bb939413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root:
+    children:
+    - children:
+      - children: []
+        localPosition: {x: 0.5, y: 1.2, z: 0}
+      - children: []
+        localPosition: {x: -0.5, y: 1.2, z: 0}
+      - children: []
+        localPosition: {x: 0, y: 1.2, z: 0.5}
+      - children: []
+        localPosition: {x: 0, y: 1.2, z: -0.5}
+      localPosition: {x: 0, y: 1, z: 0}
+    localPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &967498602133798891
 GameObject:
   m_ObjectHideFlags: 0

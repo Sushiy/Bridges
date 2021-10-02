@@ -18,14 +18,14 @@ public class Tile : MonoBehaviour
     {
         if(root != null)
         {
-            root.Draw();
+            root.Draw(this);
         }
     }
 
     [System.Serializable]
     public class Climbpoint
     {
-        Tile tile;
+        public Tile tile;
         public Climbpoint parent;
         public List<Climbpoint> children;
 
@@ -42,18 +42,20 @@ public class Tile : MonoBehaviour
         {
             get
             {
-                return localPosition;
+                return tile.transform.TransformPoint(localPosition);
             }
         }
 
-        public void Draw()
+        public void Draw(Tile t)
         {
+            if (tile == null)
+                tile = t;
             Gizmos.color = Color.green;
             Gizmos.DrawWireCube(Position, new Vector3(0.2f,0.2f,0.2f));
             for(int i = 0; i < children.Count; i++)
             {
                 Gizmos.DrawLine(Position, children[i].Position);
-                children[i].Draw();
+                children[i].Draw(t);
             }
         }
 
