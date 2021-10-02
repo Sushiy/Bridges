@@ -18,7 +18,7 @@ public class Tile : MonoBehaviour
     {
         if(root != null)
         {
-            root.Draw(this);
+            //root.Draw(this);
         }
     }
 
